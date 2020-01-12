@@ -1,12 +1,23 @@
 {
   "name": "easynote",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "xxcxxz <kulesza.michal@gmail.com>",
+  "license": "MIT",
   "dependencies": {
+    "@tinymce/tinymce-react": "^3.3.2",
+    "lodash.clonedeep": "^4.5.0",
+    "node-sass": "^4.13.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-icons-kit": "^1.3.1",
+    "react-ionicons": "^3.0.1",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.5"
   },
+  "homepage": "https://www.michalkulesza.me/noteapp",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -27,5 +38,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }

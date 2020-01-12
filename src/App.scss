@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap");
+
+/* Variables
+  ============================================ */
+
+//Colors
+$white: #fff;
+$veryLightGray: #f1f1f1;
+$lightGray: #e6e6e6;
+$gray: #8c8c8c;
+$darkGray: #565656;
+$nearBlack: #1e1e1e;
+$black: #000;
+
+$green: #8bc34a;
+$blue: #00bcd4;
+
+/* Mixins
+  ============================================ */
+@mixin flexCenterHV() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexCenterH {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flexCenterV {
+  display: flex;
+  align-items: center;
+}
+
+/* Misc
+  ============================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.4;
+  @include flexCenterHV;
+  background-color: $lightGray;
+}
+
+a {
+  color: $darkGray;
+  text-decoration: none;
+}
+
+/* Login
+  ============================================ */
+.formWrapper {
+  height: auto;
+  width: 400px;
+  background-color: $white;
+  @include flexCenterHV();
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 50px;
+  user-select: none;
+  & form {
+    width: 100%;
+  }
+}
+
+.formTitle {
+  margin-bottom: 10px;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  & label {
+    font-size: 0.8rem;
+    margin: 0 0 2px 5px;
+  }
+  & input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: $veryLightGray;
+    border-radius: 3px;
+    margin-bottom: 10px;
+  }
+}
+
+.inputButtons {
+  @include flexCenterH();
+  flex-direction: row;
+  & button {
+    width: auto;
+    padding: 8px 13px;
+    margin-top: 10px;
+    background-color: transparent;
+
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:nth-of-type(1) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.buttonGreen {
+  border: 1px solid $green;
+  &:hover {
+    background-color: $green;
+    color: $white;
+  }
+}
+
+.buttonBlue {
+  border: 1px solid $blue;
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+.App {
+  @media only screen and (max-width: 770px) {
+    width: 100vw;
+  }
+}
+
+/* MainApp
+  ============================================ */
+.MainApp {
+  height: 500px;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  overflow: hidden;
+  @media only screen and (min-width: 770px) {
+    width: 50vw;
+  }
+}
+
+/* Main Panel
+  ============================================ */
+.mainpanel-wrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.mainpaneltop-wrapper {
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid $lightGray;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.mainpaneltop-lefticons {
+  height: 100%;
+  width: auto;
+  margin-right: 20px;
+  z-index: 10;
+  @include flexCenterHV();
+}
+
+.mainpaneltop-middleicons {
+  height: 100%;
+  width: auto;
+  @include flexCenterV();
+  justify-content: space-between;
+
+  @media only screen and (max-width: 325px) {
+    display: none;
+  }
+}
+
+.mainpaneltop-righticons {
+  height: 100%;
+  width: 60px;
+  @include flexCenterV();
+  justify-content: flex-end;
+}
+
+.mainpanelmain-wrapper {
+  height: calc(100% - 70px);
+  width: 100%;
+  overflow-y: auto;
+}
+
+.icons-top {
+  height: 22px;
+  width: 22px;
+}
+
+.style-button {
+  height: 20px;
+  width: auto !important;
+  border: 1px solid $gray;
+  border-radius: 2px;
+  @include flexCenterHV();
+  margin-right: 8px;
+  padding: 0 8px;
+  cursor: pointer;
+  background-color: $white;
+  font-size: 0.8em;
+}
+
+.pressed {
+  background-color: $darkGray !important;
+  color: $white;
+}
+
+.mce-content-body {
+  height: 100%;
+  padding: 15px 19px;
+  &:focus {
+    outline: none;
+  }
+}
+
+/* Toolbar
+  ============================================ */
+
+#toolbar {
+  transform: scale(0.9);
+}
+
+.tox-tinymce {
+  cursor: pointer !important;
+  display: flex !important;
+}
+
+.tox-editor-header,
+.tox-toolbar__group {
+  border: none !important;
+}
+
+.tox-toolbar__primary {
+  background: none !important;
+}
+
+/* Side Panel
+  ============================================ */
+.sidepanel-wrapper {
+  height: 100%;
+  width: 0px;
+  border-right: 1px solid $lightGray;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  user-select: none;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+
+  &.uncollapsed {
+    width: 400px !important;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 0%;
+  }
+}
+
+.sidepaneltop-wrapper {
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid $lightGray;
+  padding: 20px;
+}
+
+.sidepaneltop-icons {
+  height: 100%;
+  @include flexCenterV();
+  justify-content: flex-end;
+}
+
+.icons-top {
+  cursor: pointer;
+}
+
+.sidepanelmain-wrapper {
+  height: calc(100% - 70px);
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+/* Side Note
+  ============================================ */
+.sidenote-wrapper {
+  height: 80px;
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 1px solid $lightGray;
+  @include flexCenterH();
+  flex-direction: column;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  &.active {
+    background-color: $veryLightGray;
+  }
+}
+
+.sidenote-title {
+  height: 3rem;
+  color: $nearBlack;
+  pointer-events: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.sidenote-preview {
+  height: 3rem;
+  color: $gray;
+  pointer-events: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.sidenote-selected {
+  background-color: $lightGray !important;
+}
