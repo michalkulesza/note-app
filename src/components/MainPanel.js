@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./MainPanel.scss";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { updateEditor, activeNote, deleteNote, changeOption } from "../actions";

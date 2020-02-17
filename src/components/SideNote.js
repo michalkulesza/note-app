@@ -1,32 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
+import "./SideNote.scss";
 
-class SideNote extends Component {
-  render() {
-    return this.props.id && this.props.data ? (
-      <div
-        className={
-          this.props.id === this.props.activeNote.index
-            ? "sidenote-wrapper active"
-            : "sidenote-wrapper"
-        }
-        onClick={() => {
-          this.props.handleClick(this.props.id, this.props.data);
-        }}
-      >
+const SideNote = props => {
+  return props.id && props.data ? (
+    <div
+      className={
+        props.id === props.activeNote.index ? "sidenote-wrapper active" : "sidenote-wrapper"
+      }
+      onClick={() => {
+        props.handleClick(props.id, props.data);
+      }}
+    >
+      <div className={props.id === props.activeNote.index ? "sidenote-title" : "sidenote-preview"}>
         <div
-          className={
-            this.props.id === this.props.activeNote.index ? "sidenote-title" : "sidenote-preview"
-          }
-        >
-          <div
-            dangerouslySetInnerHTML={{
-              __html: this.props.data.replace("<h2>", "").replace("<h5>", "")
-            }}
-          ></div>
-        </div>
+          dangerouslySetInnerHTML={{
+            __html: props.data.replace("<h2>", "").replace("<h5>", "")
+          }}
+        ></div>
       </div>
-    ) : null;
-  }
-}
+    </div>
+  ) : null;
+};
 
 export default SideNote;

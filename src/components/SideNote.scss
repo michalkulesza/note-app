@@ -1,0 +1,35 @@
+@import "../App.scss";
+
+.sidenote-wrapper {
+  height: 80px;
+  width: 100%;
+  padding: 10px 20px;
+  border-bottom: 1px solid $lightGray;
+  @include flexCenterH();
+  flex-direction: column;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  &.active {
+    background-color: $veryLightGray;
+  }
+}
+
+.sidenote-title {
+  height: 3rem;
+  color: $nearBlack;
+  pointer-events: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.sidenote-preview {
+  height: 3rem;
+  color: $gray;
+  pointer-events: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.sidenote-selected {
+  background-color: $lightGray !important;
+}

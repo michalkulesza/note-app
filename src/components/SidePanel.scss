@@ -1,0 +1,45 @@
+@import "../App.scss";
+
+.sidepanel-wrapper {
+  height: 100%;
+  width: 0px;
+  border-right: 1px solid $lightGray;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0px;
+  user-select: none;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+
+  &.uncollapsed {
+    width: 400px !important;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 0%;
+  }
+}
+
+.sidepaneltop-wrapper {
+  height: 70px;
+  width: 100%;
+  border-bottom: 1px solid $lightGray;
+  padding: 20px;
+}
+
+.sidepaneltop-icons {
+  height: 100%;
+  @include flexCenterV();
+  justify-content: flex-end;
+}
+
+.icons-top {
+  cursor: pointer;
+}
+
+.sidepanelmain-wrapper {
+  height: calc(100% - 70px);
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
