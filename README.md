@@ -4,14 +4,29 @@ Create, edit and delete Notes with this beautiful and simple UI.<br>
 Supports basic text formating such as bold, italic, Heading1 etc.</h5>
   <br>
   <p align="center">
-    <img src="https://forthebadge.com/images/badges/made-with-javascript.svg" alt="For the badge">
+    <img src="https://forthebadge.com/images/badges/uses-badges.svg" alt="For the badge">
   </p>
 
 ---
 
 <p align="center">
-<img align="center" src="https://github.com/michalkulesza/readme-resources/blob/master/notes.gif" alt="Notes app preview gif" />
-  </p>
+  <img align="center" src="https://github.com/michalkulesza/readme-resources/blob/master/notes.gif" alt="Notes app preview gif" />
+ </p>
+
+<p align="center">
+	<a href="#" class="myButton" style="box-shadow: 0px 9px 14px -7px #a3a3a3;
+      background-color:#44c767;
+      border-radius:3px;
+      display:inline-block;
+      cursor:pointer;
+      color:#ffffff;
+      font-family:Verdana;
+      font-size:13px;
+      font-weight:bold;
+      padding:13px 32px;
+      text-decoration:none;">SEE LIVE VERSION
+	</a>    
+</p>
 
 ## Installation
 
