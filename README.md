@@ -14,17 +14,7 @@ Supports basic text formating such as bold, italic, Heading1 etc.</h5>
  </p>
 
 <p align="center">
-	<a href="#" class="myButton" style="box-shadow: 0px 9px 14px -7px #a3a3a3;
-      background-color:#44c767;
-      border-radius:3px;
-      display:inline-block;
-      cursor:pointer;
-      color:#ffffff;
-      font-family:Verdana;
-      font-size:13px;
-      font-weight:bold;
-      padding:13px 32px;
-      text-decoration:none;">SEE LIVE VERSION
+	<a href="https://michalkulesza.me/noteapp/">SEE LIVE VERSION
 	</a>    
 </p>
 
